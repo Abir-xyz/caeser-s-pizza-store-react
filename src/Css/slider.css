@@ -1,7 +1,6 @@
 .slider-wrapper {
-  max-width: 90vw;
-  margin: 0 auto;
-  margin-top: 1rem;
+  max-width: 80vw;
+  margin: 1rem auto;
 }
 
 .slider-header h1 {
@@ -10,7 +9,7 @@
 }
 
 .slider-item img {
-  width: 350px;
+  width: 300px;
 }
 
 .slider-name {
@@ -73,47 +72,21 @@
   margin: 30px 0;
 }
 
-.slider-left,
-.slider-right {
-  margin: 0 10px;
-  font-size: 1.4rem;
-  background: none;
-  color: var(--themeClr);
-  border: 1px solid var(--themeClr);
-  height: 40px;
-  width: 40px;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-}
-
-.slider-left:hover {
-  background-color: orange;
-  color: #fff;
-}
-.slider-right:hover {
-  background-color: orange;
-  color: #fff;
-}
-
 .slider-center {
   display: flex;
   align-items: center;
   justify-content: space-between;
   overflow-x: hidden;
-}
-/* ------ responsive ------- */
-
-@media screen and (min-width: 768px) {
+  transition: all 0.3s ease-in-out;
+  width: 100%;
 }
 
-@media screen and (max-width: 768px) {
-  .slider-wrapper {
-    max-width: 90vw;
-    margin: 0 auto;
-  }
-  .slider-header h1 {
-    font-weight: 700;
-    font-size: 1.5rem;
-  }
+/* --- */
+
+.slider-item {
+  transition: all 0.3s ease-in-out;
+}
+
+.slider-wrap > .react-multi-carousel-dot-list {
+  padding-top: 30px !important;
 }

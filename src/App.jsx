@@ -1,39 +1,29 @@
 import './App.css';
-import Banner from './Components/Banner';
-import Cart from './Components/Cart';
-import Divider from './Components/Divider';
-import Experience from './Components/Experience';
-import Nav from './Components/Nav';
-import Slider from './Components/Slider';
-import Video from './Components/Video';
-import { useState } from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import {
+  Home,
+  Category,
+  Acc,
+  About,
+  Contact,
+  Error,
+  CartPage,
+} from './Pages/index';
 
 const App = () => {
-  // cart
-  const [cartEnter, setCartEnter] = useState(false);
-  const [cartExit, setCartExit] = useState(false);
-
   return (
     <>
-      <header className='header'>
-        <Nav
-          cartEnter={cartEnter}
-          setCartEnter={setCartEnter}
-          cartExit={cartExit}
-          setCartExit={setCartExit}
-        />
-        <Banner />
-        <Video />
-        <Cart
-          cartEnter={cartEnter}
-          setCartEnter={setCartEnter}
-          cartExit={cartExit}
-          setCartExit={setCartExit}
-        />
-      </header>
-      <Divider />
-      <Experience />
-      <Slider />
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='category' element={<Category />} />
+          <Route path='about' element={<About />} />
+          <Route path='contact' element={<Contact />} />
+          <Route path='acc' element={<Acc />} />
+          <Route path='cart' element={<CartPage />} />
+          <Route path='*' element={<Error />} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 };

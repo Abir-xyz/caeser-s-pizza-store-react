@@ -156,9 +156,6 @@
   animation: lefttoright 1s 1;
 }
 
-#order-li {
-  display: none;
-}
 
 .link-img-wrapper {
   animation: righttoleft 1s 1;

@@ -1,0 +1,90 @@
+.subNav-container {
+  max-width: 90vw;
+  margin: 0 auto;
+  margin-top: 40px !important;
+}
+
+.subNav-center {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sub-brand {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #000;
+}
+
+.subNav-link {
+  margin: 0 16px;
+  color: #000;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+/* togglers */
+.subNav-toggler-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.subNav-brand {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.subNav-enter,
+.subNav-exit {
+  display: none;
+}
+
+.subNav-links {
+  height: auto !important;
+}
+
+.subNav-enter {
+  display: none !important;
+}
+
+/* responsive */
+
+@media screen and (max-width: 800px) {
+  .subNav-enter {
+    display: block !important;
+  }
+  .subNav-center {
+    display: block;
+  }
+  .subLinks-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    margin-top: 30px;
+  }
+  .subNav-link {
+    margin: 8px 0;
+  }
+  .subNav-links {
+    height: 0 !important;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+  }
+  .show-links {
+    height: 250px !important;
+    overflow: none;
+  }
+  .show-toggle {
+    display: block !important;
+  }
+
+  .hide-toggle {
+    display: none !important;
+  }
+
+  .hide-links {
+    height: 0 !important;
+    overflow: none;
+  }
+}

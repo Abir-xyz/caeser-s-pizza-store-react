@@ -1,11 +1,10 @@
-import { useContext, useState } from 'react';
+import { useState } from 'react';
 import '../Css/Nav.css';
 import '../Css/modal.css';
 import navImage from '../pictures/pizza4.png';
-import { createContext } from 'react';
-import Cart from './Cart';
+import { Link } from 'react-router-dom';
 
-const Nav = ({ cartEnter, setCartEnter, cartExit, setCartExit }) => {
+const Nav = ({ setCartEnter, setCartExit }) => {
   const [navEnter, setNavEnter] = useState(true);
   const [navExit, setNavExit] = useState(false);
 
@@ -87,29 +86,24 @@ const Nav = ({ cartEnter, setCartEnter, cartExit, setCartExit }) => {
               <div className='nav_links'>
                 <ul className='navbar-ul'>
                   <li className='navbar-li'>
-                    <a href='#' className='navbar-link' id='order-li'>
-                      order now
-                    </a>
-                  </li>
-                  <li className='navbar-li'>
-                    <a href='#' className='navbar-link'>
+                    <Link to='category' className='navbar-link'>
                       Category
-                    </a>
+                    </Link>
                   </li>
                   <li className='navbar-li'>
-                    <a href='#' className='navbar-link'>
-                      Deals
-                    </a>
+                    <Link to='about' className='navbar-link'>
+                      About us
+                    </Link>
                   </li>
                   <li className='navbar-li'>
-                    <a href='#' className='navbar-link'>
+                    <Link to='acc' className='navbar-link'>
                       Account
-                    </a>
+                    </Link>
                   </li>
                   <li className='navbar-li'>
-                    <a href='#' className='navbar-link'>
-                      Find Us
-                    </a>
+                    <Link to='contact' className='navbar-link'>
+                      contact us
+                    </Link>
                   </li>
                 </ul>
               </div>
@@ -124,8 +118,12 @@ const Nav = ({ cartEnter, setCartEnter, cartExit, setCartExit }) => {
               <div className='modal-social'>
                 <ul className='modal-ul'>
                   <li className='modal-li'>
-                    <a href='#' className='modal-li-link'>
-                      facebook{' '}
+                    <a
+                      href='https://www.facebook.com/'
+                      className='modal-li-link'
+                      target='_0'
+                    >
+                      facebook
                     </a>
                   </li>
                   <li className='modal-li'>
