@@ -1,8 +1,12 @@
 import { Link } from 'react-router-dom';
 import '../Css/subNav.css';
 import { useState } from 'react';
+import { useCartContext } from '../Context/CartContexts';
 
 const SubNav = () => {
+  // cart ctrl
+  const { handleCartEnter } = useCartContext();
+  // toggler
   const [enter, setEnter] = useState(false);
   const [exit, setExit] = useState(false);
 
@@ -60,14 +64,21 @@ const SubNav = () => {
               <Link to='contact' className='subNav-link'>
                 Contact Us
               </Link>
+              {/* --------- cart ---------- */}
+
+              <Link className={`cart-wrapper`} onClick={handleCartEnter}>
+                <span className={`navbar-cart subNav-cart`}>
+                  <i className='fa-solid fa-cart-shopping'></i>
+                </span>
+                <span className='cart-count subNav-count'>
+                  <p>0</p>
+                </span>
+              </Link>
+
+              {/* --------- cart ---------- */}
               <Link to='acc' className='subNav-link'>
                 <span>
                   <i className='fa-solid fa-user'></i>
-                </span>
-              </Link>
-              <Link to='cart' className='subNav-link'>
-                <span>
-                  <i className='fa-solid fa-cart-shopping'></i>
                 </span>
               </Link>
             </div>

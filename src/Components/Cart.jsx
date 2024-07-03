@@ -1,11 +1,11 @@
 import { useState } from 'react';
 import '../Css/cart.css';
 import demo from '../pictures/pizza4.png';
+import { useCartContext } from '../Context/CartContexts';
 
-const Cart = ({ cartEnter, setCartEnter, cartExit, setCartExit }) => {
-  const handleCartExit = () => {
-    setCartExit(true);
-  };
+const Cart = () => {
+  // cart ctrl
+  const { cartEnter, cartExit, handleCartExit } = useCartContext();
 
   const hideCart = cartExit ? 'hide-cart' : '';
   const showCart = cartEnter ? 'show-cart' : '';

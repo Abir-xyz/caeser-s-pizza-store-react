@@ -35,9 +35,18 @@
   justify-content: space-between;
 }
 
+.sub-brand {
+  /* color: var(--themeClr); */
+  /* color: orange; */
+}
+
 .subNav-enter,
 .subNav-exit {
   display: none;
+  font-size: 1.4rem;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
 .subNav-links {
@@ -47,6 +56,17 @@
 .subNav-enter {
   display: none !important;
 }
+
+/* ------------ */
+.subNav-cart {
+  color: #000;
+}
+
+.subNav-count {
+  top: -30%;
+}
+
+/* ---------- */
 
 /* responsive */
 

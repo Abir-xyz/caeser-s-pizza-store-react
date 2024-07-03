@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import '../Css/ErrorPage.css';
 import SubNav from '../Components/SubNav';
+import { Cart } from '../Components';
 
 const ErrorPage = () => {
   return (
@@ -14,6 +15,7 @@ const ErrorPage = () => {
             Back To Home
           </Link>
         </div>
+        <Cart />
       </main>
     </>
   );

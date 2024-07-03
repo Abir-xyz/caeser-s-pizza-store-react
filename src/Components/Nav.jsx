@@ -3,8 +3,12 @@ import '../Css/Nav.css';
 import '../Css/modal.css';
 import navImage from '../pictures/pizza4.png';
 import { Link } from 'react-router-dom';
+import { useCartContext } from '../Context/CartContexts';
 
-const Nav = ({ setCartEnter, setCartExit }) => {
+const Nav = () => {
+  // cart
+  const { handleCartEnter } = useCartContext();
+  // nav btn
   const [navEnter, setNavEnter] = useState(true);
   const [navExit, setNavExit] = useState(false);
 
@@ -15,11 +19,6 @@ const Nav = ({ setCartEnter, setCartExit }) => {
   const handleModalExit = () => {
     setNavExit(false);
     setNavEnter(true);
-  };
-
-  const handleCartEnter = () => {
-    setCartEnter(true);
-    setCartExit(false);
   };
 
   return (

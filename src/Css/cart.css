@@ -1,7 +1,8 @@
 .cart-container {
   min-height: 100vh;
   width: 380px;
-  background-color: #fff;
+  /* background-color: #fff; */
+  background-color: #fcfcfc;
   position: fixed;
   top: 0;
   right: 0;

@@ -1,5 +1,3 @@
-import { useState } from 'react';
-
 import {
   Banner,
   Cart,
@@ -11,27 +9,13 @@ import {
 } from '../Components/index';
 
 const HomePage = () => {
-  // cart
-  const [cartEnter, setCartEnter] = useState(false);
-  const [cartExit, setCartExit] = useState(false);
-
   return (
     <>
       <header className='header'>
-        <Nav
-          cartEnter={cartEnter}
-          setCartEnter={setCartEnter}
-          cartExit={cartExit}
-          setCartExit={setCartExit}
-        />
+        <Nav />
         <Banner />
         <Video />
-        <Cart
-          cartEnter={cartEnter}
-          setCartEnter={setCartEnter}
-          cartExit={cartExit}
-          setCartExit={setCartExit}
-        />
+        <Cart />
       </header>
       <Divider />
       <Experience />
