@@ -1,3 +1,5 @@
+import ClientForm from '../Components/ClientForm';
+import HomeAbt from '../Components/HomeAbt';
 import {
   Banner,
   Cart,
@@ -7,6 +9,7 @@ import {
   Slider,
   Video,
 } from '../Components/index';
+import Reviews from '../Components/Reviews';
 
 const HomePage = () => {
   return (
@@ -20,6 +23,9 @@ const HomePage = () => {
       <Divider />
       <Experience />
       <Slider />
+      <HomeAbt />
+      <Reviews />
+      <ClientForm />
     </>
   );
 };

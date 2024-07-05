@@ -4,8 +4,6 @@
 }
 
 .slider-header h1 {
-  font-size: 2rem;
-  font-weight: 600;
   margin-bottom: 30px;
 }
 
@@ -36,7 +34,7 @@
   text-transform: capitalize;
   font-size: 1.1rem;
   padding: 30px 0;
-  line-height: 1.8;
+  line-height: 1.7;
 }
 
 .slider-btn {
@@ -99,4 +97,11 @@
 
 .slider-wrap > .react-multi-carousel-dot-list {
   padding-top: 30px !important;
+}
+
+@media screen and (min-width: 768px) {
+  .slider-header h1 {
+    font-size: 2rem;
+    font-weight: 600;
+  }
 }
