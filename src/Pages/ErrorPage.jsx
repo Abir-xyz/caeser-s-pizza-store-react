@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import '../Css/ErrorPage.css';
 import SubNav from '../Components/SubNav';
 import { Cart } from '../Components';
+import Footer from '../Components/Footer.jsx';
 
 const ErrorPage = () => {
   return (
@@ -16,6 +17,7 @@ const ErrorPage = () => {
           </Link>
         </div>
         <Cart />
+        <Footer />
       </main>
     </>
   );

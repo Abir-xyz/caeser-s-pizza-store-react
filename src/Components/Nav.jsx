@@ -86,7 +86,7 @@ const Nav = () => {
                 <ul className='navbar-ul'>
                   <li className='navbar-li'>
                     <Link to='category' className='navbar-link'>
-                      Category
+                      Menu
                     </Link>
                   </li>
                   <li className='navbar-li'>

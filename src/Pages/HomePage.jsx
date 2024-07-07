@@ -1,4 +1,5 @@
 import ClientForm from '../Components/ClientForm';
+import Footer from '../Components/Footer';
 import HomeAbt from '../Components/HomeAbt';
 import {
   Banner,
@@ -26,6 +27,7 @@ const HomePage = () => {
       <HomeAbt />
       <Reviews />
       <ClientForm />
+      <Footer />
     </>
   );
 };
