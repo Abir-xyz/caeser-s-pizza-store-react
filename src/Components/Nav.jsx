@@ -4,6 +4,7 @@ import '../Css/modal.css';
 import navImage from '../pictures/pizza4.png';
 import { Link } from 'react-router-dom';
 import { useCartContext } from '../Context/CartContexts';
+import UserAccount from './UserAccount';
 
 const Nav = () => {
   // cart
@@ -47,6 +48,11 @@ const Nav = () => {
                   <p>0</p>
                 </div>
               </div>
+              {/* account */}
+              <div className='home-acc'>
+                {' '}
+                <UserAccount />
+              </div>
               {/* ----- */}
               <div className='navbar-toggler-container'>
                 <button
@@ -55,7 +61,7 @@ const Nav = () => {
                   }`}
                   onClick={handleModalEnter}
                 >
-                  <span className='navbar-toggler-text'>Menu</span>
+                  <span className='navbar-toggler-text'></span>
                   <span className={`navbar-toggler-btn`}>
                     <i className='fa-solid fa-bars-staggered'></i>
                   </span>
@@ -66,7 +72,7 @@ const Nav = () => {
                   } `}
                   onClick={handleModalExit}
                 >
-                  <span className='navbar-toggler-text'>Menu</span>
+                  <span className='navbar-toggler-text'></span>
                   <span className={`navbar-toggler nav-exit`}>
                     <i className='fa-solid fa-xmark'></i>
                   </span>
@@ -90,13 +96,13 @@ const Nav = () => {
                     </Link>
                   </li>
                   <li className='navbar-li'>
-                    <Link to='about' className='navbar-link'>
-                      About us
+                    <Link to='account' className='navbar-link'>
+                      Account
                     </Link>
                   </li>
                   <li className='navbar-li'>
-                    <Link to='acc' className='navbar-link'>
-                      Account
+                    <Link to='about' className='navbar-link'>
+                      About us
                     </Link>
                   </li>
                   <li className='navbar-li'>

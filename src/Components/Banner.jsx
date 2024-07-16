@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import '../Css/banner.css';
 
 const Banner = () => {
@@ -13,7 +14,7 @@ const Banner = () => {
               Explore Our Irresistible Pizza Creations Crafted with Passion and
               Precision. Order Now for a Taste Journey You Won't Forget!
             </h2>
-            <button className='order-btn'>Order Now</button>
+            <Link to='#' className='order-btn'>Order Now</Link>
           </div>
         </div>
       </div>

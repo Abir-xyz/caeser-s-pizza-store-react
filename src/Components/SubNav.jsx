@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import '../Css/subNav.css';
 import { useState } from 'react';
 import { useCartContext } from '../Context/CartContexts';
+import UserAccount from './UserAccount';
 
 const SubNav = () => {
   // cart ctrl
@@ -55,17 +56,19 @@ const SubNav = () => {
             className={`subNav-links ${enter ? 'show-links' : 'hide-links'} `}
           >
             <div className={`subLinks-wrapper`}>
-              <Link to='category' className='subNav-link'>
+              <Link to='/category' className='subNav-link'>
                 Category
               </Link>
-              <Link to='about' className='subNav-link'>
+              <Link to='/orders' className='subNav-link'>
+                Orders
+              </Link>
+              <Link to='/about' className='subNav-link'>
                 About Us
               </Link>
-              <Link to='contact' className='subNav-link'>
+              <Link to='/contact' className='subNav-link'>
                 Contact Us
               </Link>
               {/* --------- cart ---------- */}
-
               <Link className={`cart-wrapper`} onClick={handleCartEnter}>
                 <span className={`navbar-cart subNav-cart`}>
                   <i className='fa-solid fa-cart-shopping'></i>
@@ -74,12 +77,9 @@ const SubNav = () => {
                   <p>0</p>
                 </span>
               </Link>
-
-              {/* --------- cart ---------- */}
-              <Link to='acc' className='subNav-link'>
-                <span>
-                  <i className='fa-solid fa-user'></i>
-                </span>
+              {/* --------- end of cart ---------- */}
+              <Link className='subNav-link'>
+                <UserAccount />
               </Link>
             </div>
           </div>

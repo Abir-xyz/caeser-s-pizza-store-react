@@ -92,8 +92,8 @@
     transition: all 0.3s ease-in-out;
   }
   .show-links {
-    height: 250px !important;
-    overflow: none;
+    height: 265px !important;
+    overflow: none !important;
   }
   .show-toggle {
     display: block !important;

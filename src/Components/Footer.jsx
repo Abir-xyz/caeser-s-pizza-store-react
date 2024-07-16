@@ -35,9 +35,7 @@ const Footer = () => {
         <div className='footer-item'>
           <ul className='footer-ul'>
             <li className='footer-li footer-item-title'>Useful Links</li>
-            <li className='footer-li'>
-              <Link className='footer-link'>Locations</Link>
-            </li>
+
             <li className='footer-li'>
               <Link className='footer-link'>Online orders</Link>
             </li>
@@ -54,15 +52,15 @@ const Footer = () => {
         </div>
         <div className='footer-item'>
           <ul className='footer-ul'>
-            <li className='footer-li footer-item-title'>Account</li>
+            <li className='footer-li footer-item-title'>Company</li>
             <li className='footer-li'>
-              <Link className='footer-link'>Login</Link>
+              <Link className='footer-link'>Investors</Link>
             </li>
             <li className='footer-li'>
-              <Link className='footer-link'>Logout</Link>
+              <Link className='footer-link'>Donations</Link>
             </li>
             <li className='footer-li'>
-              <Link className='footer-link'>Create Account</Link>
+              <Link className='footer-link'>Charity</Link>
             </li>
           </ul>
         </div>
