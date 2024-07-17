@@ -3,6 +3,7 @@ import '../Css/subNav.css';
 import { useState } from 'react';
 import { useCartContext } from '../Context/CartContexts';
 import UserAccount from './UserAccount';
+import Cart from './Cart';
 
 const SubNav = () => {
   // cart ctrl

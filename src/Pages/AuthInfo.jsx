@@ -8,7 +8,6 @@ const AuthInfo = () => {
   if (isLoading) {
     return <div>Loading ...</div>;
   }
-
   return (
     <section className='auth-container'>
       <div className='auth-heading'>
@@ -35,11 +34,5 @@ const AuthInfo = () => {
     </section>
   );
 };
-export default AuthInfo;
 
-// isAuthenticated && (
-//       <div className='auth-info-wrapper'>
-//         <img src={user.picture} alt={user.name} className='auth-img' />
-//         <h2 className='auth-name'>{user.name}</h2>
-//         <p className='auth-email'>{user.email}</p>
-//       </div>
+export default AuthInfo;

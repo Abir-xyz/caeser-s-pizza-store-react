@@ -1,11 +1,12 @@
 import '../Css/account.css';
 import { useUserContext } from '../Context/UserContext';
+import { Link } from 'react-router-dom';
 
 const UserAccount = () => {
   const { loginWithRedirect, logout, myUser } = useUserContext();
 
   return (
-    <a>
+    <Link>
       {myUser ? (
         <button
           type='button'
@@ -29,7 +30,7 @@ const UserAccount = () => {
           </span>
         </button>
       )}
-    </a>
+    </Link>
   );
 };
 export default UserAccount;

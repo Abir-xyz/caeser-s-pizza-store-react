@@ -1,9 +1,10 @@
 import { useState } from 'react';
 import '../Css/cart.css';
-import demo from '../pictures/pizza4.png';
 import { useCartContext } from '../Context/CartContexts';
+import CartList from './CartList';
 
 const Cart = () => {
+  const { cartItems } = useCartContext();
   // cart ctrl
   const { cartEnter, cartExit, handleCartExit } = useCartContext();
 
@@ -25,25 +26,7 @@ const Cart = () => {
             </div>
           </div>
           <div className='cart-content'>
-            <div className='cart-item'>
-              <div className='cart-img'>
-                <img src={demo} className='cart-img' />
-              </div>
-              <div className='cart-info'>
-                <div className='cart-item-name'>
-                  <p>classic americano</p>
-                </div>
-                <div className='cart-item-quantity-wrapper'>
-                  <p className='cart-item-quantity'>1 x</p>
-                  <p className='cart-item-price'>$30</p>
-                </div>
-              </div>
-              <div className='cart-item-delete'>
-                <span>
-                  <i className='fa-solid fa-trash'></i>
-                </span>
-              </div>
-            </div>
+            <CartList items={cartItems} />
           </div>
           <div className='cart-footer'>
             <div className='cart-total'>
@@ -52,7 +35,7 @@ const Cart = () => {
             </div>
             <div className='cart-options'>
               <a href='#' className='view-cart'>
-                View Cart
+                Edit Cart
               </a>
               <a href='#' className='checkout'>
                 Checkout

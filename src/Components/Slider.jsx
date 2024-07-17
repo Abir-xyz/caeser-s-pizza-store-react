@@ -1,12 +1,28 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import '../Css/slider.css';
 import sliderData from '../Data/slider';
-
+import Cart from './Cart.jsx';
 // carousel
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
+import { useCartContext } from '../Context/CartContexts';
 
 const SliderComponent = () => {
+  const [clickedButtons, setClickedButtons] = useState({});
+  const { handleCartEnter } = useCartContext();
+  const { addItemToCart } = useCartContext();
+
+  const handleToggle = (id) => {
+    setClickedButtons((prevState) => ({
+      ...prevState,
+      [id]: !prevState[id],
+    }));
+  };
+
+  const getItem = (item) => {
+    addItemToCart(item);
+  };
+
   const responsive = {
     superLargeDesktop: {
       breakpoint: { max: 4000, min: 3000 },
@@ -45,7 +61,29 @@ const SliderComponent = () => {
               <p className='slider-price'>{item.price}</p>
             </div>
             <p className='slider-desc'>{item.desc}</p>
-            <button className='slider-btn'>order now</button>
+            <div>
+              {clickedButtons[item.id] ? (
+                <button
+                  className='slider-btn view-carts'
+                  onClick={() => {
+                    handleToggle(item.id);
+                    handleCartEnter();
+                  }}
+                >
+                  View Cart
+                </button>
+              ) : (
+                <button
+                  className='slider-btn'
+                  onClick={() => {
+                    handleToggle(item.id);
+                    getItem(item);
+                  }}
+                >
+                  Order Now
+                </button>
+              )}
+            </div>
           </div>
         ))}
       </Carousel>
