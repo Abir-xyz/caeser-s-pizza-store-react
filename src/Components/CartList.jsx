@@ -1,9 +1,9 @@
 import '../Css/cartList.css';
-import { json } from 'react-router';
-import demo from '../pictures/pizza4.png';
-import { useEffect } from 'react';
+import { useCartContext } from '../Context/CartContexts';
 
 const CartList = ({ items }) => {
+  const { cartItems, removeItemFromCart } = useCartContext();
+
   return (
     <div className='cart-item'>
       {items &&
@@ -19,11 +19,14 @@ const CartList = ({ items }) => {
                     <p>{item.name}</p>
                   </div>
                   <div className='cart-item-quantity-wrapper'>
-                    {/* <p className='cart-item-quantity'>1 x</p> */}
+                    <p className='cart-item-quantity'>{item.quantity} x</p>
                     <p className='cart-item-price'>{item.price}</p>
                   </div>
                 </div>
-                <div className='cart-item-delete'>
+                <div
+                  className='cart-item-delete cart-deleteBtn'
+                  onClick={() => removeItemFromCart(item.id)}
+                >
                   <span>
                     <i className='fa-solid fa-trash'></i>
                   </span>

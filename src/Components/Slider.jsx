@@ -1,7 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import '../Css/slider.css';
 import sliderData from '../Data/slider';
-import Cart from './Cart.jsx';
 // carousel
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
@@ -17,10 +16,6 @@ const SliderComponent = () => {
       ...prevState,
       [id]: !prevState[id],
     }));
-  };
-
-  const getItem = (item) => {
-    addItemToCart(item);
   };
 
   const responsive = {
@@ -77,7 +72,7 @@ const SliderComponent = () => {
                   className='slider-btn'
                   onClick={() => {
                     handleToggle(item.id);
-                    getItem(item);
+                    addItemToCart(item);
                   }}
                 >
                   Order Now

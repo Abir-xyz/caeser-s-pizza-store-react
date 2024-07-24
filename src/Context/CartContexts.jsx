@@ -33,8 +33,22 @@ export const CartSetup = ({ children }) => {
   }, [cartItems]);
 
   const addItemToCart = (item) => {
-    setCartItems((prevItems) => [...prevItems, item]);
+    setCartItems((prevItems) => {
+      const existingItem = prevItems.find((i) => i.id === item.id);
+      if (existingItem) {
+        return prevItems.map((i) =>
+          i.id === item.id ? { ...i, quantity: i.quantity + 1 } : i
+        );
+      } else {
+        return [...prevItems, { ...item, quantity: 1 }];
+      }
+    });
   };
+
+  const removeItemFromCart = (id) => {
+    setCartItems((prevItems) => prevItems.filter((item) => item.id !== id));
+  };
+
   // end of cart functionality
 
   return (
@@ -48,6 +62,7 @@ export const CartSetup = ({ children }) => {
         handleCartExit,
         cartItems,
         addItemToCart,
+        removeItemFromCart,
       }}
     >
       {children}
