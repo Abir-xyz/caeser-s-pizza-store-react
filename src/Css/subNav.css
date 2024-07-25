@@ -2,12 +2,18 @@
   max-width: 90vw;
   margin: 0 auto;
   margin-top: 40px !important;
+  padding-bottom: 4rem;
 }
 
 .subNav-center {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  /* fixed */
+  position: fixed;
+  width: 90%;
+  margin: 0 auto;
+  z-index: 1;
 }
 
 .sub-brand {

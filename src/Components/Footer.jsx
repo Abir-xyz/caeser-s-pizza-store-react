@@ -11,23 +11,28 @@ const Footer = () => {
           <ul className='footer-ul'>
             <li className='footer-li footer-item-title'>Caeser's Pizza</li>
             <li className='footer-li'>
-              <Link to='category' className='footer-link'>
+              <Link to='/category' className='footer-link'>
                 Menu
               </Link>
             </li>
             <li className='footer-li'>
-              <Link to='order' className='footer-link'>
+              <Link to='/order' className='footer-link'>
                 Order Now
               </Link>
             </li>
             <li className='footer-li'>
-              <Link to='about' className='footer-link'>
+              <Link to='/about' className='footer-link'>
                 About Us
               </Link>
             </li>
             <li className='footer-li'>
-              <Link to='contact' className='footer-link'>
+              <Link to='/contact' className='footer-link'>
                 Contact Us
+              </Link>
+            </li>
+            <li className='footer-li'>
+              <Link to='/account' className='footer-link'>
+                Account
               </Link>
             </li>
           </ul>
