@@ -28,20 +28,24 @@ const Cart = () => {
           <div className='cart-content'>
             <CartList items={cartItems} />
           </div>
-          <div className='cart-footer'>
-            <div className='cart-total'>
-              <h3>Total</h3>
-              <h3>$30</h3>
+          {cartItems.length === 0 ? (
+            ''
+          ) : (
+            <div className='cart-footer'>
+              <div className='cart-total'>
+                <h3>Total</h3>
+                <h3>$30</h3>
+              </div>
+              <div className='cart-options'>
+                <a href='#' className='view-cart'>
+                  Edit Cart
+                </a>
+                <a href='#' className='checkout'>
+                  Checkout
+                </a>
+              </div>
             </div>
-            <div className='cart-options'>
-              <a href='#' className='view-cart'>
-                Edit Cart
-              </a>
-              <a href='#' className='checkout'>
-                Checkout
-              </a>
-            </div>
-          </div>
+          )}
         </div>
       </section>
     </>

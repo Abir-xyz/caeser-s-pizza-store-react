@@ -8,6 +8,7 @@ import UserAccount from './UserAccount';
 
 const Nav = () => {
   // cart
+  const { cartItems } = useCartContext();
   const { handleCartEnter } = useCartContext();
   // nav btn
   const [navEnter, setNavEnter] = useState(true);
@@ -21,6 +22,8 @@ const Nav = () => {
     setNavExit(false);
     setNavEnter(true);
   };
+
+  console.log(cartItems.length);
 
   return (
     <>
@@ -45,7 +48,7 @@ const Nav = () => {
                   <i className='fa-solid fa-cart-shopping'></i>
                 </span>
                 <div className='cart-count'>
-                  <p>0</p>
+                  <p className='update-cart-count'>{cartItems.length}</p>
                 </div>
               </div>
               {/* account */}

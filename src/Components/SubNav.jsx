@@ -7,6 +7,7 @@ import Cart from './Cart';
 
 const SubNav = () => {
   // cart ctrl
+  const { cartItems } = useCartContext();
   const { handleCartEnter } = useCartContext();
   // toggler
   const [enter, setEnter] = useState(false);
@@ -75,7 +76,7 @@ const SubNav = () => {
                   <i className='fa-solid fa-cart-shopping'></i>
                 </span>
                 <span className='cart-count subNav-count'>
-                  <p>0</p>
+                  <p>{cartItems.length}</p>
                 </span>
               </Link>
               {/* --------- end of cart ---------- */}
