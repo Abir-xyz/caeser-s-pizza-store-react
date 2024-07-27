@@ -11,6 +11,18 @@ const Cart = () => {
   const hideCart = cartExit ? 'hide-cart' : '';
   const showCart = cartEnter ? 'show-cart' : '';
 
+  // totalPrice
+  // const totalPriceArr = cartItems.map((item) => item.price);
+  // console.log(totalPriceArr);
+
+  const totalPrice = cartItems.reduce((total, item) => {
+    let quantity = item.quantity;
+    let amount = parseFloat(item.price);
+    let calculatePrice = quantity * amount;
+    total += calculatePrice;
+    return total;
+  }, 0);
+
   return (
     <>
       <section className={`cart-container ${showCart} ${hideCart}`}>
@@ -34,7 +46,7 @@ const Cart = () => {
             <div className='cart-footer'>
               <div className='cart-total'>
                 <h3>Total</h3>
-                <h3>$30</h3>
+                <h3 className='cart_total'>${totalPrice.toFixed(2)}</h3>
               </div>
               <div className='cart-options'>
                 <a href='#' className='view-cart'>

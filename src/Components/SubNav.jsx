@@ -23,6 +23,12 @@ const SubNav = () => {
     setEnter(false);
   };
 
+  const totalItems = cartItems.reduce((total, item) => {
+    let quantity = item.quantity;
+    total += quantity;
+    return total;
+  }, 0);
+
   return (
     <>
       <section className='subNav-container'>
@@ -76,7 +82,7 @@ const SubNav = () => {
                   <i className='fa-solid fa-cart-shopping'></i>
                 </span>
                 <span className='cart-count subNav-count'>
-                  <p>{cartItems.length}</p>
+                  <p>{totalItems}</p>
                 </span>
               </Link>
               {/* --------- end of cart ---------- */}

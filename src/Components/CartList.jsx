@@ -24,7 +24,7 @@ const CartList = ({ items }) => {
                       </div>
                       <div className='cart-item-quantity-wrapper'>
                         <p className='cart-item-quantity'>{item.quantity} x</p>
-                        <p className='cart-item-price'>{item.price}</p>
+                        <p className='cart-item-price'>${item.price}</p>
                       </div>
                     </div>
                     <div

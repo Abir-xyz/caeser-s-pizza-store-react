@@ -23,7 +23,11 @@ const Nav = () => {
     setNavEnter(true);
   };
 
-  console.log(cartItems.length);
+  const totalItems = cartItems.reduce((total, item) => {
+    let quantity = item.quantity;
+    total += quantity;
+    return total;
+  }, 0);
 
   return (
     <>
@@ -48,7 +52,7 @@ const Nav = () => {
                   <i className='fa-solid fa-cart-shopping'></i>
                 </span>
                 <div className='cart-count'>
-                  <p className='update-cart-count'>{cartItems.length}</p>
+                  <p className='update-cart-count'>{totalItems}</p>
                 </div>
               </div>
               {/* account */}

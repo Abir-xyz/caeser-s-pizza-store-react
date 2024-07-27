@@ -53,7 +53,7 @@ const SliderComponent = () => {
             </div>
             <div className='slider-title'>
               <p className='slider-name'>{item.name}</p>
-              <p className='slider-price'>{item.price}</p>
+              <p className='slider-price'>${item.price}</p>
             </div>
             <p className='slider-desc'>{item.desc}</p>
             <div>
