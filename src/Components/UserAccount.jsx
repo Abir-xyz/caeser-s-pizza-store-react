@@ -26,7 +26,7 @@ const UserAccount = () => {
           className='auth-btn'
           onClick={() => {
             handleClearCart();
-            logout({ returnTo: window.location.origin });
+            logout({ logoutParams: { returnTo: window.location.origin } });``
           }}
         >
           <span className='acc-btn-text'>Logout</span>
