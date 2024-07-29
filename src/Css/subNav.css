@@ -63,6 +63,11 @@
   display: none !important;
 }
 
+.subLinks-wrapper {
+  display: flex;
+  align-items: center;
+}
+
 /* ------------ */
 .subNav-cart {
   color: #000;
@@ -88,6 +93,7 @@
     flex-direction: column;
     margin-left: 10px;
     margin-top: 30px;
+    align-items: first baseline;
   }
   .subNav-link {
     margin: 8px 0;
@@ -112,5 +118,21 @@
   .hide-links {
     height: 0 !important;
     overflow: none;
+  }
+
+  .sub-links-min {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .subUser-acc-max {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .sub-brand {
+    font-size: 1.6rem;
   }
 }

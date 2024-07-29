@@ -64,31 +64,33 @@ const SubNav = () => {
             className={`subNav-links ${enter ? 'show-links' : 'hide-links'} `}
           >
             <div className={`subLinks-wrapper`}>
-              <Link to='/menu' className='subNav-link'>
-                Menu
-              </Link>
-              <Link to='/orders' className='subNav-link'>
-                Orders
-              </Link>
-              <Link to='/about' className='subNav-link'>
-                About Us
-              </Link>
-              <Link to='/contact' className='subNav-link'>
-                Contact Us
-              </Link>
-              {/* --------- cart ---------- */}
-              <Link className={`cart-wrapper`} onClick={handleCartEnter}>
-                <span className={`navbar-cart subNav-cart`}>
-                  <i className='fa-solid fa-cart-shopping'></i>
-                </span>
-                <span className='cart-count subNav-count'>
-                  <p>{totalItems}</p>
-                </span>
-              </Link>
-              {/* --------- end of cart ---------- */}
-              <Link className='subNav-link'>
-                <UserAccount />
-              </Link>
+              <div className='sub-links-min'>
+                <Link to='/menu' className='subNav-link'>
+                  Menu
+                </Link>
+                <Link to='/orders' className='subNav-link'>
+                  Orders
+                </Link>
+                <Link to='/about' className='subNav-link'>
+                  About Us
+                </Link>
+                <Link to='/contact' className='subNav-link'>
+                  Contact Us
+                </Link>
+              </div>
+              <div className='subUser-acc-max'>
+                <Link className={`cart-wrapper`} onClick={handleCartEnter}>
+                  <span className={`navbar-cart subNav-cart`}>
+                    <i className='fa-solid fa-cart-shopping'></i>
+                  </span>
+                  <span className='cart-count subNav-count'>
+                    <p>{totalItems}</p>
+                  </span>
+                </Link>
+                <Link className='subNav-link'>
+                  <UserAccount />
+                </Link>
+              </div>
             </div>
           </div>
         </div>
