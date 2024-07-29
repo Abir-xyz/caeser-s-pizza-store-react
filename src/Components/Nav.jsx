@@ -98,7 +98,7 @@ const Nav = () => {
               <div className='nav_links'>
                 <ul className='navbar-ul'>
                   <li className='navbar-li'>
-                    <Link to='category' className='navbar-link'>
+                    <Link to='menu' className='navbar-link'>
                       Menu
                     </Link>
                   </li>

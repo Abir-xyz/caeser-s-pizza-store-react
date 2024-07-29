@@ -1,9 +1,22 @@
 import '../Css/account.css';
+import { useEffect } from 'react';
 import { useUserContext } from '../Context/UserContext';
 import { Link } from 'react-router-dom';
+import { useCartContext } from '../Context/CartContexts';
 
 const UserAccount = () => {
   const { loginWithRedirect, logout, myUser } = useUserContext();
+  const { handleClearCart, setCartItems } = useCartContext();
+
+  useEffect(() => {
+    if (myUser) {
+      const savedCartItems = localStorage.getItem('savedCartItemsFromAcc');
+      if (savedCartItems) {
+        setCartItems(JSON.parse(savedCartItems));
+        localStorage.removeItem('savedCartItemsFromAcc');
+      }
+    }
+  }, [myUser, setCartItems]);
 
   return (
     <Link>
@@ -11,7 +24,10 @@ const UserAccount = () => {
         <button
           type='button'
           className='auth-btn'
-          onClick={() => logout({ returnTo: window.location.origin })}
+          onClick={() => {
+            handleClearCart();
+            logout({ returnTo: window.location.origin });
+          }}
         >
           <span className='acc-btn-text'>Logout</span>
           <span>

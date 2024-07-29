@@ -64,8 +64,8 @@ const SubNav = () => {
             className={`subNav-links ${enter ? 'show-links' : 'hide-links'} `}
           >
             <div className={`subLinks-wrapper`}>
-              <Link to='/category' className='subNav-link'>
-                Category
+              <Link to='/menu' className='subNav-link'>
+                Menu
               </Link>
               <Link to='/orders' className='subNav-link'>
                 Orders

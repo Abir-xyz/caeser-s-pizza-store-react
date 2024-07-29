@@ -27,6 +27,12 @@ export const CartSetup = ({ children }) => {
   };
   // end of cart open/exit
 
+  const handleClearCart = () => {
+    localStorage.setItem('savedCartItemsFromAcc', JSON.stringify(cartItems));
+    setCartItems([]);
+    localStorage.removeItem('cartItems');
+  };
+
   // cart functionality
   useEffect(() => {
     localStorage.setItem('cartItems', JSON.stringify(cartItems));
@@ -63,6 +69,8 @@ export const CartSetup = ({ children }) => {
         cartItems,
         addItemToCart,
         removeItemFromCart,
+        handleClearCart,
+        setCartItems,
       }}
     >
       {children}
