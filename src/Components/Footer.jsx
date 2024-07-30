@@ -11,12 +11,12 @@ const Footer = () => {
           <ul className='footer-ul'>
             <li className='footer-li footer-item-title'>Caeser's Pizza</li>
             <li className='footer-li'>
-              <Link to='/category' className='footer-link'>
+              <Link to='/menu' className='footer-link'>
                 Menu
               </Link>
             </li>
             <li className='footer-li'>
-              <Link to='/order' className='footer-link'>
+              <Link to='/account' className='footer-link'>
                 Order Now
               </Link>
             </li>
