@@ -33,7 +33,7 @@
 }
 
 .subNav-link {
-  margin: 0 16px;
+  margin: 0 11px;
   color: #000;
   font-size: 1.1rem;
   font-weight: 500;
@@ -92,7 +92,7 @@
 
 /* responsive */
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
   .subNav-enter {
     display: block !important;
   }
@@ -107,7 +107,7 @@
     align-items: first baseline;
   }
   .subNav-link {
-    margin: 8px 0;
+    margin: 3px 0;
   }
   .subNav-links {
     height: 0 !important;
@@ -116,7 +116,7 @@
     margin-right: 0 !important;
   }
   .show-links {
-    height: 220px !important;
+    height: 200px !important;
     overflow: none !important;
   }
   .show-toggle {

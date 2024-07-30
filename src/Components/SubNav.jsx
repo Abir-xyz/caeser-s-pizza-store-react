@@ -105,8 +105,8 @@ const SubNav = () => {
                 <Link to='/menu' className='subNav-link'>
                   Menu
                 </Link>
-                <Link to='/orders' className='subNav-link'>
-                  Orders
+                <Link to='/account' className='subNav-link'>
+                  Account
                 </Link>
                 <Link to='/about' className='subNav-link'>
                   About Us

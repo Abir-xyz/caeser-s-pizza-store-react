@@ -16,11 +16,6 @@ const Footer = () => {
               </Link>
             </li>
             <li className='footer-li'>
-              <Link to='/account' className='footer-link'>
-                Order Now
-              </Link>
-            </li>
-            <li className='footer-li'>
               <Link to='/about' className='footer-link'>
                 About Us
               </Link>

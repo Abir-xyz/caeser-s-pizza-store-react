@@ -4,6 +4,6 @@ import Category from './CategoryPage';
 import About from './AboutPage';
 import Acc from './AccPage';
 import Contact from './Contact';
-import CartPage from './CartPage';
+import Orders from './Orders';
 
-export { Home, Category, About, Acc, Contact, Error, CartPage };
+export { Home, Category, About, Acc, Contact, Error, Orders };

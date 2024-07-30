@@ -9,7 +9,7 @@ import AuthInfo from './AuthInfo.jsx';
 const AccPage = () => {
   return (
     <>
-      <main className='acc-container'>
+      <section className='acc-container'>
         <SubNav />
         <Location
           title={'Account'}
@@ -22,7 +22,7 @@ const AccPage = () => {
           <div className='auth-div-center'></div>
         </div>
         <Footer />
-      </main>
+      </section>
     </>
   );
 };

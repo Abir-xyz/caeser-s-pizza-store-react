@@ -7,7 +7,7 @@ import {
   About,
   Contact,
   Error,
-  CartPage,
+  Orders,
 } from './Pages/index';
 
 const App = () => {
@@ -20,7 +20,7 @@ const App = () => {
           <Route path='about' element={<About />} />
           <Route path='contact' element={<Contact />} />
           <Route path='account' element={<Acc />} />
-          <Route path='cart' element={<CartPage />} />
+          <Route path='orders' element={<Orders />} />
           <Route path='*' element={<Error />} />
         </Routes>
       </BrowserRouter>
