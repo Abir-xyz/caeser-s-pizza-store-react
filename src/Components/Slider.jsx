@@ -1,23 +1,11 @@
-import React, { useState, useRef, useEffect } from 'react';
 import sliderData from '../Data/slider';
 // carousel
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import { useCartContext } from '../Context/CartContexts';
 import styled from 'styled-components';
+import OrderButtons from './OrderButtons';
 
 const SliderComponent = () => {
-  const [clickedButtons, setClickedButtons] = useState({});
-  const { handleCartEnter } = useCartContext();
-  const { addItemToCart } = useCartContext();
-
-  const handleToggle = (id) => {
-    setClickedButtons((prevState) => ({
-      ...prevState,
-      [id]: !prevState[id],
-    }));
-  };
-
   const responsive = {
     superLargeDesktop: {
       breakpoint: { max: 4000, min: 3000 },
@@ -61,29 +49,7 @@ const SliderComponent = () => {
                 <p className='slider-price'>${item.price}</p>
               </div>
               <p className='slider-desc'>{item.desc}</p>
-              <div>
-                {clickedButtons[item.id] ? (
-                  <button
-                    className='slider-btn view-carts'
-                    onClick={() => {
-                      handleToggle(item.id);
-                      handleCartEnter();
-                    }}
-                  >
-                    View Cart
-                  </button>
-                ) : (
-                  <button
-                    className='slider-btn'
-                    onClick={() => {
-                      handleToggle(item.id);
-                      addItemToCart(item);
-                    }}
-                  >
-                    Order Now
-                  </button>
-                )}
-              </div>
+              <OrderButtons item={item} />
             </div>
           ))}
         </Carousel>
@@ -132,26 +98,8 @@ const Wrapper = styled.section`
     line-height: 1.7;
   }
 
-  .slider-btn {
-    background: none;
-    border: none;
-    font-size: 1.1rem;
-    text-transform: capitalize;
-    font-weight: 500;
-    cursor: pointer;
-    background-color: var(--themeClr);
-    color: #fff;
-    padding: 8px 12px;
-    border-radius: 10rem;
-    transition: all 0.3s ease-in-out;
-  }
-
   .react-multiple-carousel__arrow {
     z-index: 0 !important;
-  }
-
-  .slider-btn:hover {
-    background-color: red;
   }
 
   .slider-title {
@@ -165,7 +113,7 @@ const Wrapper = styled.section`
     padding: 20px;
     box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
       rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
-    border-radius: 5px;
+    border-radius: 30px;
     margin: 20px 10px;
   }
 
@@ -186,10 +134,6 @@ const Wrapper = styled.section`
     overflow-x: hidden;
     transition: all 0.3s ease-in-out;
     width: 100%;
-  }
-
-  .view-carts {
-    background-color: red !important;
   }
 
   /* --- */

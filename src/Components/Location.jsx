@@ -1,4 +1,3 @@
-
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
@@ -63,7 +62,9 @@ const Wrapper = styled.section`
     color: #000;
     font-size: 1.4rem;
   }
-
+  .location-wrap h1 {
+    font-size: 1.8rem;
+  }
   @media screen and (min-width: 768px) {
     .location-div-center {
       display: flex;
@@ -74,9 +75,6 @@ const Wrapper = styled.section`
     .location-wrap p {
       padding: 0;
       font-size: 1.1rem;
-    }
-    .location-wrap h1 {
-      font-size: 1.8rem;
     }
   }
 `;
