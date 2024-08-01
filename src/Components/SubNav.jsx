@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { useCartContext } from '../Context/CartContexts';
 import UserAccount from './UserAccount';
@@ -102,18 +102,18 @@ const SubNav = () => {
             >
               <div className={`subLinks-wrapper`}>
                 <div className='sub-links-min'>
-                  <Link to='/menu' className='subNav-link'>
+                  <NavLink to='/menu' className='subNav-link'>
                     Menu
-                  </Link>
-                  <Link to='/account' className='subNav-link'>
+                  </NavLink>
+                  <NavLink to='/account' className='subNav-link'>
                     Account
-                  </Link>
-                  <Link to='/about' className='subNav-link'>
+                  </NavLink>
+                  <NavLink to='/about' className='subNav-link'>
                     About Us
-                  </Link>
-                  <Link to='/contact' className='subNav-link'>
+                  </NavLink>
+                  <NavLink to='/contact' className='subNav-link'>
                     Contact Us
-                  </Link>
+                  </NavLink>
                 </div>
               </div>
             </div>
@@ -274,6 +274,9 @@ const Wrapper = styled.section`
     .subUser-acc-max > .cart-wrapper {
       margin-right: 20px;
     }
+  }
+  .sub-links-min a.active {
+    color: red;
   }
 
   @media screen and (max-width: 600px) {
