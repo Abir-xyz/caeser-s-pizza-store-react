@@ -4,8 +4,35 @@ import sampleImg3 from '../pictures/3.png';
 import sampleImg4 from '../pictures/4.png';
 import sampleImg5 from '../pictures/5.png';
 import sampleImg6 from '../pictures/2.png';
+import sampleImg7 from '../pictures/pasta.png';
+import sampleImg8 from '../pictures/burger-2.png';
+import sampleImg9 from '../pictures/pasta-2.png';
 
 const sliderData = [
+  {
+    id: 7,
+    img: sampleImg7,
+    name: 'Pasta',
+    price: '15',
+    desc: 'Delicate pasta, perfectly cooked, tossed in rich sauce, with fresh herbs and cheese for a savory delight.',
+    category: 'pasta',
+  },
+  {
+    id: 8,
+    img: sampleImg8,
+    name: 'Hamburger',
+    price: '18.50',
+    desc: 'A hearty hamburger featuring a seasoned beef patty, crisp lettuce, ripe tomatoes, onions, and a soft bun.',
+    category: 'burger',
+  },
+  {
+    id: 9,
+    img: sampleImg9,
+    name: 'alfredo pasta',
+    price: '13.33',
+    desc: 'Creamy Alfredo sauce, rich with butter, garlic, and Parmesan, coats tender pasta for a comforting, indulgent dish.',
+    category: 'pasta',
+  },
   {
     id: 1,
     img: sampleImg1,

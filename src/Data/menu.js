@@ -1,9 +1,9 @@
 import sampleImg1 from '../pictures/slider-pizza.png';
 import sampleImg2 from '../pictures/6.png';
-import sampleImg3 from '../pictures/3.png';
-import sampleImg4 from '../pictures/4.png';
-import sampleImg5 from '../pictures/5.png';
-import sampleImg6 from '../pictures/2.png';
+import sampleImg3 from '../pictures/burger.png';
+import sampleImg4 from '../pictures/pasta.png';
+import sampleImg5 from '../pictures/burger-2.png';
+import sampleImg6 from '../pictures/pasta-2.png';
 
 const sliderData = [
   {
@@ -25,33 +25,33 @@ const sliderData = [
   {
     id: 3,
     img: sampleImg3,
-    name: 'Extra chezzy',
-    price: '25',
-    desc: 'A cheesy pizza boasts layers of melted mozzarella, gooey cheddar, pepperoni slices, and rich Parmesan on a crisp crust.',
+    name: 'Beef Burger',
+    price: '13.50',
+    desc: 'Juicy beef patty, fresh lettuce, tomato, cheese, and pickles, all nestled in a toasted bun.',
     category: 'burger',
   },
   {
     id: 4,
     img: sampleImg4,
-    name: 'Vegan',
+    name: 'Pasta',
     price: '15',
-    desc: 'A vegan pizza has plant-based cheese, fresh veggies, savory tomato sauce, and a crispy, dairy-free crust.',
+    desc: 'Delicate pasta, perfectly cooked, tossed in rich sauce, with fresh herbs and cheese for a savory delight.',
     category: 'pasta',
   },
   {
     id: 5,
     img: sampleImg5,
-    name: 'Mini beast',
+    name: 'Hamburger',
     price: '18.50',
-    desc: 'A mini pizza offers more than  a bite-sized delight with tangy sauce, melted cheese, and choice toppings.',
+    desc: 'A hearty hamburger featuring a seasoned beef patty, crisp lettuce, ripe tomatoes, onions, and a soft bun.',
     category: 'burger',
   },
   {
     id: 6,
     img: sampleImg6,
-    name: 'Regular',
+    name: 'alfredo pasta',
     price: '13.33',
-    desc: 'A regular pizza has pure perfection and a perfect balance of sauce, melted cheese, and various savory toppings.',
+    desc: 'Creamy Alfredo sauce, rich with butter, garlic, and Parmesan, coats tender pasta for a comforting, indulgent dish.',
     category: 'pasta',
   },
 ];
