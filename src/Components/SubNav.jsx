@@ -31,6 +31,10 @@ const SubNav = () => {
     return total;
   }, 0);
 
+  const scrollToTop = () => {
+    window.scrollTo(0, 0);
+  };
+
   // fixed nav
   useEffect(() => {
     const handleScroll = () => {
@@ -102,16 +106,32 @@ const SubNav = () => {
             >
               <div className={`subLinks-wrapper`}>
                 <div className='sub-links-min'>
-                  <NavLink to='/menu' className='subNav-link'>
+                  <NavLink
+                    to='/menu'
+                    className='subNav-link'
+                    onClick={scrollToTop}
+                  >
                     Menu
                   </NavLink>
-                  <NavLink to='/account' className='subNav-link'>
+                  <NavLink
+                    to='/account'
+                    className='subNav-link'
+                    onClick={scrollToTop}
+                  >
                     Account
                   </NavLink>
-                  <NavLink to='/about' className='subNav-link'>
+                  <NavLink
+                    to='/about'
+                    className='subNav-link'
+                    onClick={scrollToTop}
+                  >
                     About Us
                   </NavLink>
-                  <NavLink to='/contact' className='subNav-link'>
+                  <NavLink
+                    to='/contact'
+                    className='subNav-link'
+                    onClick={scrollToTop}
+                  >
                     Contact Us
                   </NavLink>
                 </div>

@@ -4,6 +4,10 @@ import appleStore from '../pictures/aplstr.png';
 import styled from 'styled-components';
 
 const Footer = () => {
+  const scrollToTop = () => {
+    window.scrollTo(0, 0);
+  };
+
   return (
     <Wrapper className='section'>
       <section className='footer-container'>
@@ -12,22 +16,30 @@ const Footer = () => {
             <ul className='footer-ul'>
               <li className='footer-li footer-item-title'>Caeser's Pizza</li>
               <li className='footer-li'>
-                <Link to='/menu' className='footer-link'>
+                <Link to='/menu' className='footer-link' onClick={scrollToTop}>
                   Menu
                 </Link>
               </li>
               <li className='footer-li'>
-                <Link to='/about' className='footer-link'>
+                <Link to='/about' className='footer-link' onClick={scrollToTop}>
                   About Us
                 </Link>
               </li>
               <li className='footer-li'>
-                <Link to='/contact' className='footer-link'>
+                <Link
+                  to='/contact'
+                  className='footer-link'
+                  onClick={scrollToTop}
+                >
                   Contact Us
                 </Link>
               </li>
               <li className='footer-li'>
-                <Link to='/account' className='footer-link'>
+                <Link
+                  to='/account'
+                  className='footer-link'
+                  onClick={scrollToTop}
+                >
                   Account
                 </Link>
               </li>
