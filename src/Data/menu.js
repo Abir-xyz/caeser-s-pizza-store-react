@@ -31,7 +31,7 @@ const sliderData = [
     category: 'burger',
   },
   {
-    id: 4,
+    id: 7,
     img: sampleImg4,
     name: 'Pasta',
     price: '15',
@@ -39,7 +39,7 @@ const sliderData = [
     category: 'pasta',
   },
   {
-    id: 5,
+    id: 8,
     img: sampleImg5,
     name: 'Hamburger',
     price: '18.50',
@@ -47,7 +47,7 @@ const sliderData = [
     category: 'burger',
   },
   {
-    id: 6,
+    id: 9,
     img: sampleImg6,
     name: 'alfredo pasta',
     price: '13.33',

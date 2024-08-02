@@ -241,6 +241,31 @@ const Wrapper = styled.section`
     border-radius: 50%;
     text-align: center;
   }
+
+  .subNav-link::after {
+    content: '';
+    height: 2px;
+    background: red;
+    display: block;
+    transition: width 0.3s ease-in-out, color 0.3s ease-in-out;
+    margin: 0 auto;
+    width: 0%;
+  }
+  .subNav-link:hover {
+    color: red;
+  }
+  .subNav-link:hover::after {
+    width: 100% !important;
+  }
+
+  .sub-links-min {
+    display: flex;
+  }
+
+  .subUser-acc-max .subNav-link {
+    width: 0 !important;
+  }
+
   /* responsive */
 
   @media screen and (max-width: 900px) {
@@ -297,6 +322,9 @@ const Wrapper = styled.section`
   }
   .sub-links-min a.active {
     color: red;
+  }
+  .subNav-link:hover::after {
+    width: 0%;
   }
 
   @media screen and (max-width: 600px) {
