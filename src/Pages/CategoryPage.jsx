@@ -30,7 +30,7 @@ const CategoryPage = () => {
         <div className='menu-location'>
           <Location
             title={'Menu'}
-            desc={'We got everything that your heart desires!'}
+            desc={'We got something that your heart desires!'}
           />
         </div>
         <div className='menu-contents'>
