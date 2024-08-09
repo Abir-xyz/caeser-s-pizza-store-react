@@ -314,7 +314,7 @@ const Wrapper = styled.section`
     }
 
     .subUser-acc-max {
-      margin-right: 40px;
+      margin-right: 60px;
     }
     .subUser-acc-max > .cart-wrapper {
       margin-right: 20px;
