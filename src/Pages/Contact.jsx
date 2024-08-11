@@ -4,6 +4,7 @@ import Footer from '../Components/Footer';
 import Location from '../Components/Location';
 import ContactForm from '../Components/ContactForm';
 import picture from '../pictures/pizza4.png';
+import Cart from '../Components/Cart';
 
 const Contact = () => {
   return (
@@ -47,6 +48,9 @@ const Contact = () => {
           </div> */}
         </div>
       </section>
+      <div>
+        <Cart />
+      </div>
       <div>
         <Footer />
       </div>
