@@ -5,6 +5,7 @@ import Location from '../Components/Location';
 import About from '../Components/HomeAbt';
 import Divider from '../Components/Divider';
 import Reviews from '../Components/Reviews';
+import Cart from '../Components/Cart';
 
 const AboutPage = () => {
   return (
@@ -37,6 +38,9 @@ const AboutPage = () => {
           <div>
             <Reviews />
           </div>
+        </div>
+        <div>
+          <Cart />
         </div>
         <div>
           <Footer />
