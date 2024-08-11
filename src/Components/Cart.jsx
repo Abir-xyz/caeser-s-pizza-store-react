@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { useCartContext } from '../Context/CartContexts';
 import CartList from './CartList';
 import styled from 'styled-components';
@@ -6,13 +7,10 @@ const Cart = () => {
   const { cartItems } = useCartContext();
   // cart ctrl
   const { cartEnter, cartExit, handleCartExit } = useCartContext();
+  const [editCart, setEditCart] = useState(false);
 
   const hideCart = cartExit ? 'hide-cart' : '';
   const showCart = cartEnter ? 'show-cart' : '';
-
-  // totalPrice
-  // const totalPriceArr = cartItems.map((item) => item.price);
-  // console.log(totalPriceArr);
 
   const totalPrice = cartItems.reduce((total, item) => {
     let quantity = item.quantity;
@@ -21,6 +19,10 @@ const Cart = () => {
     total += calculatePrice;
     return total;
   }, 0);
+
+  const handleEditCart = () => {
+    setEditCart(!editCart);
+  };
 
   return (
     <>
@@ -38,7 +40,7 @@ const Cart = () => {
               </div>
             </div>
             <div className='cart-content'>
-              <CartList items={cartItems} />
+              <CartList items={cartItems} editCart={editCart} />
             </div>
             {cartItems.length === 0 ? (
               ''
@@ -49,9 +51,9 @@ const Cart = () => {
                   <h3 className='cart_total'>${totalPrice.toFixed(2)}</h3>
                 </div>
                 <div className='cart-options'>
-                  <a href='#' className='view-cart'>
-                    Edit Cart
-                  </a>
+                  <button className='view-cart' onClick={handleEditCart}>
+                    {editCart ? 'Done' : 'Edit Cart'}
+                  </button>
                   <a href='#' className='checkout'>
                     Checkout
                   </a>
@@ -155,8 +157,11 @@ const Wrapper = styled.section`
     background-color: var(--themeClr);
     color: var(--clrWhite);
     padding: 8px 12px;
+    border: none;
     border-radius: 10rem;
     transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    font-size: 1.1rem;
   }
 
   .view-cart:hover {

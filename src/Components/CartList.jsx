@@ -1,8 +1,9 @@
 import { useCartContext } from '../Context/CartContexts';
 import styled from 'styled-components';
 
-const CartList = ({ items }) => {
-  const { cartItems, removeItemFromCart } = useCartContext();
+const CartList = ({ items, editCart }) => {
+  const { cartItems, removeItemFromCart, increaseItem, decreaseItem } =
+    useCartContext();
 
   return (
     <Wrapper className='section'>
@@ -16,10 +17,10 @@ const CartList = ({ items }) => {
                 return (
                   <article className='cart-article' key={item.id}>
                     <div className='inner-cart-article'>
-                      <div className='cart-img'>
+                      <div className='cart-img cartItem'>
                         <img src={item.img} className='cart-img' />
                       </div>
-                      <div className='cart-info'>
+                      <div className='cart-info cartItem'>
                         <div className='cart-item-name'>
                           <p>{item.name}</p>
                         </div>
@@ -30,8 +31,31 @@ const CartList = ({ items }) => {
                           <p className='cart-item-price'>${item.price}</p>
                         </div>
                       </div>
+                      {/* increase / decrease buttons */}
                       <div
-                        className='cart-item-delete cart-deleteBtn'
+                        className={`cart-item-ctrl-wrapper cartItem ${
+                          editCart ? 'show-ctrl' : ''
+                        } `}
+                      >
+                        <button
+                          className='cart-increase'
+                          onClick={() => increaseItem(item)}
+                        >
+                          <span>
+                            <i className='fa-solid fa-plus'></i>
+                          </span>
+                        </button>
+                        <button
+                          className='cart-decrease'
+                          onClick={() => decreaseItem(item)}
+                        >
+                          <span>
+                            <i className='fa-solid fa-minus'></i>
+                          </span>
+                        </button>
+                      </div>
+                      <div
+                        className='cart-item-delete cart-deleteBtn cartItem'
                         onClick={() => removeItemFromCart(item.id)}
                       >
                         <span>
@@ -64,14 +88,23 @@ const Wrapper = styled.section`
 
   .inner-cart-article {
     display: flex;
-    align-items: center;
-    justify-content: space-around;
     width: 100%;
+    justify-content: space-around;
+    align-items: center;
   }
 
   .cart-img {
     height: 60px;
     width: 60px;
+  }
+  .cart-info {
+    min-width: 110px;
+  }
+  .cart-item-ctrl-wrapper {
+    width: 48px;
+  }
+  .cart-item-delete {
+    width: 14px;
   }
 
   .cart-item-quantity-wrapper {
@@ -96,7 +129,7 @@ const Wrapper = styled.section`
   .cart-info {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    /* align-items: center; */
   }
 
   .cartlist-header {
@@ -107,6 +140,32 @@ const Wrapper = styled.section`
     text-transform: capitalize;
     font-size: 1.1rem;
     text-align: center;
+  }
+  .cart-item-ctrl-wrapper {
+    display: flex;
+    flex-direction: row;
+    transition: all 0.3s ease-in-out;
+    display: none;
+  }
+  .show-ctrl {
+    display: block;
+  }
+  .cart-increase,
+  .cart-decrease {
+    background: none;
+    border: none;
+    margin: 0 2px;
+    cursor: pointer;
+    border: 1px solid;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+  }
+  .cart-increase:hover {
+    color: green;
+  }
+  .cart-decrease:hover {
+    color: red;
   }
 `;
 
