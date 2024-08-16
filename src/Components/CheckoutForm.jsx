@@ -1,17 +1,13 @@
 import styled from 'styled-components';
 
-const ContactForm = () => {
+const CheckoutForm = () => {
   return (
     <Wrapper className='section'>
       <section className='contact-section'>
         <div className='contact-intro'>
-          <h2 className='contact-title'>Send a message</h2>
-          <p className='contact-description'>
-            Fill out the form below and we'll get back to you as soon as
-            possible.
-          </p>
+          <h2 className='contact-title'>Billing Address</h2>
         </div>
-        <form className='contact-form'>
+        <div className='contact-form'>
           <div className='form-group-container'>
             <div className='form-group'>
               <label htmlFor='name' className='form-label'>
@@ -53,8 +49,44 @@ const ContactForm = () => {
               />
             </div>
             <div className='form-group'>
+              <label htmlFor='phone' className='form-label'>
+                Town/City
+              </label>
+              <input
+                id='city'
+                name='city'
+                className='form-input'
+                type='text'
+                required
+              />
+            </div>
+            <div className='form-group'>
+              <label htmlFor='phone' className='form-label'>
+                Street Address
+              </label>
+              <input
+                id='street'
+                name='street'
+                className='form-input'
+                type='text'
+                required
+              />
+            </div>
+            <div className='form-group'>
+              <label htmlFor='phone' className='form-label'>
+                Postcode/Zip
+              </label>
+              <input
+                id='zip'
+                name='zip'
+                className='form-input'
+                type='text'
+                required
+              />
+            </div>
+            <div className='form-group'>
               <label htmlFor='message' className='form-label'>
-                Message
+                Order Notes
               </label>
               <textarea
                 className='form-textarea'
@@ -65,10 +97,10 @@ const ContactForm = () => {
               ></textarea>
             </div>
           </div>
-          <button className='form-submit' type='submit'>
+          {/* <button className='form-submit' type='submit'>
             Send Message
-          </button>
-        </form>
+          </button> */}
+        </div>
       </section>
     </Wrapper>
   );
@@ -77,14 +109,11 @@ const ContactForm = () => {
 const Wrapper = styled.section`
   .contact-section {
     width: 100%;
-    max-width: 40rem;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 3rem 1rem;
+    max-width: 50rem;
   }
 
   .contact-title {
-    font-size: 2rem;
+    font-size: 1.6;
     font-weight: 600;
   }
 
@@ -137,6 +166,7 @@ const Wrapper = styled.section`
 
   .form-submit {
     width: 100%;
+    font-size: 1.1rem;
     margin-top: 1.2rem;
     background-color: orange;
     color: #fff;
@@ -152,9 +182,6 @@ const Wrapper = styled.section`
   }
 
   .contact-form {
-    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
-      rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
-    padding: 30px;
     border-radius: 10px;
   }
 
@@ -165,4 +192,4 @@ const Wrapper = styled.section`
   }
 `;
 
-export default ContactForm;
+export default CheckoutForm;

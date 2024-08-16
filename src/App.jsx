@@ -7,8 +7,10 @@ import {
   About,
   Contact,
   Error,
-  Orders,
+  CheckOut,
+  Stripe,
 } from './Pages/index';
+import PrivateRoute from './Pages/PrivateRoute';
 
 const App = () => {
   return (
@@ -20,7 +22,8 @@ const App = () => {
           <Route path='about' element={<About />} />
           <Route path='contact' element={<Contact />} />
           <Route path='account' element={<Acc />} />
-          <Route path='orders' element={<Orders />} />
+          <Route path='checkout' element={<CheckOut />} />
+          <Route path='payment' element={<Stripe />} />
           <Route path='*' element={<Error />} />
         </Routes>
       </BrowserRouter>

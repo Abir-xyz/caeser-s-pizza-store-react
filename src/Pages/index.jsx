@@ -4,6 +4,7 @@ import Category from './CategoryPage';
 import About from './AboutPage';
 import Acc from './AccPage';
 import Contact from './Contact';
-import Orders from './Orders';
+import CheckOut from './CheckOut';
+import Stripe from './Stripe';
 
-export { Home, Category, About, Acc, Contact, Error, Orders };
+export { Home, Category, About, Acc, Contact, Error, CheckOut, Stripe };

@@ -73,9 +73,9 @@ const SubNav = () => {
                     <p>{totalItems}</p>
                   </span>
                 </Link>
-                <Link className='subNav-link'>
+                <div className='subNav-link'>
                   <UserAccount />
-                </Link>
+                </div>
               </div>
               {/* togglers */}
               <div className='subNav-toggler-wrapper'>

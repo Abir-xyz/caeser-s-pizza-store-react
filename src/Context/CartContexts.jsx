@@ -17,6 +17,8 @@ export const CartSetup = ({ children }) => {
     return savedCartItems ? JSON.parse(savedCartItems) : [];
   });
 
+  // cart checkout
+
   // cart open/exit
   const handleCartEnter = () => {
     setCartEnter(true);
@@ -84,6 +86,15 @@ export const CartSetup = ({ children }) => {
     setCartItems((prevItems) => prevItems.filter((item) => item.id !== id));
   };
 
+  // total price of cartItems
+  const totalPrice = cartItems.reduce((total, item) => {
+    let quantity = item.quantity;
+    let amount = parseFloat(item.price);
+    let calculatePrice = quantity * amount;
+    total += calculatePrice;
+    return total;
+  }, 0);
+
   // end of cart functionality
 
   return (
@@ -102,6 +113,7 @@ export const CartSetup = ({ children }) => {
         setCartItems,
         increaseItem,
         decreaseItem,
+        totalPrice,
       }}
     >
       {children}

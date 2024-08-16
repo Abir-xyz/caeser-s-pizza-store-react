@@ -26,21 +26,21 @@ const Contact = () => {
           {/* <div className='contact-details'>
             <div className='detail'>
               <p>
-                <i class='fa-solid fa-location-dot'></i>
+                <i className='fa-solid fa-location-dot'></i>
               </p>
               <p>Location</p>
               <p>Dhaka, Bangladesh</p>
             </div>
             <div className='detail'>
               <p>
-                <i class='fa-solid fa-phone'></i>
+                <i className='fa-solid fa-phone'></i>
               </p>
               <p>Call</p>
               <p>+1 (234) 56789</p>
             </div>
             <div className='detail'>
               <p>
-                <i class='fa-solid fa-envelope'></i>
+                <i className='fa-solid fa-envelope'></i>
               </p>
               <p>Email</p>
               <p>caeserpizzastore@gmail.com</p>

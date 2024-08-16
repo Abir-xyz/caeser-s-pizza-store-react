@@ -2,23 +2,16 @@ import { useState } from 'react';
 import { useCartContext } from '../Context/CartContexts';
 import CartList from './CartList';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 const Cart = () => {
-  const { cartItems } = useCartContext();
+  const { cartItems, totalPrice } = useCartContext();
   // cart ctrl
   const { cartEnter, cartExit, handleCartExit } = useCartContext();
   const [editCart, setEditCart] = useState(false);
 
   const hideCart = cartExit ? 'hide-cart' : '';
   const showCart = cartEnter ? 'show-cart' : '';
-
-  const totalPrice = cartItems.reduce((total, item) => {
-    let quantity = item.quantity;
-    let amount = parseFloat(item.price);
-    let calculatePrice = quantity * amount;
-    total += calculatePrice;
-    return total;
-  }, 0);
 
   const handleEditCart = () => {
     setEditCart(!editCart);
@@ -54,9 +47,7 @@ const Cart = () => {
                   <button className='view-cart' onClick={handleEditCart}>
                     {editCart ? 'Done' : 'Edit Cart'}
                   </button>
-                  <a href='#' className='checkout'>
-                    Checkout
-                  </a>
+                  <Link className='checkout'>Checkout</Link>
                 </div>
               </div>
             )}
