@@ -11,20 +11,18 @@ import {
   useStripe,
   useElements,
 } from '@stripe/react-stripe-js';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 const stripePromise = loadStripe(import.meta.env.VITE_STRIPE_PUBLIC_KEY);
 
 const CheckoutForm = ({ dpmCheckerLink }) => {
   const stripe = useStripe();
   const elements = useElements();
-
   const [message, setMessage] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
+  const { setCartItems } = useCartContext();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     if (!stripe || !elements) {
       // Stripe.js hasn't yet loaded.
       // Make sure to disable form submission until Stripe.js has loaded.
@@ -33,12 +31,13 @@ const CheckoutForm = ({ dpmCheckerLink }) => {
 
     setIsLoading(true);
 
-    const { error } = await stripe.confirmPayment({
+    const { error, paymentIntent } = await stripe.confirmPayment({
       elements,
       confirmParams: {
         // Make sure to change this to your payment completion page
-        return_url: 'http://localhost:8888',
+        return_url: 'http://localhost:8888/complete',
       },
+      redirect: 'if_required',
     });
 
     // This point will only be reached if there is an immediate error when
@@ -46,10 +45,16 @@ const CheckoutForm = ({ dpmCheckerLink }) => {
     // your `return_url`. For some payment methods like iDEAL, your customer will
     // be redirected to an intermediate site first to authorize the payment, then
     // redirected to the `return_url`.
-    if (error.type === 'card_error' || error.type === 'validation_error') {
-      setMessage(error.message);
-    } else {
-      setMessage('An unexpected error occurred.');
+    if (error) {
+      if (error.type === 'card_error' || error.type === 'validation_error') {
+        setMessage(error.message);
+      } else {
+        setMessage('An unexpected error occurred.');
+      }
+    } else if (paymentIntent && paymentIntent.status === 'succeeded') {
+      // Clear the cart after successful payment
+      setCartItems([]);
+      window.location.href = 'http://localhost:8888/complete';
     }
 
     setIsLoading(false);
@@ -138,8 +143,7 @@ const Wrapper = styled.section`
     display: flex;
     align-items: center;
     flex-direction: column;
-    height: 100vh;
-    width: 100vw;
+    padding: 20px 0;
   }
 
   form {
