@@ -91,7 +91,7 @@ const CheckoutForm = () => {
               <textarea
                 className='form-textarea'
                 id='message'
-                name='message'
+                name='note'
                 placeholder='Your message'
                 required
               ></textarea>

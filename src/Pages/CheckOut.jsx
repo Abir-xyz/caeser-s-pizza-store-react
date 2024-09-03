@@ -5,7 +5,7 @@ import Location from '../Components/Location';
 import CheckoutForm from '../Components/CheckoutForm';
 import CartItemsCheck from '../Components/CartItemsCheck';
 import styled from 'styled-components';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { useCartContext } from '../Context/CartContexts';
 
 const CheckOut = () => {
@@ -48,7 +48,7 @@ const CheckOut = () => {
           <input
             type='hidden'
             name='redirect'
-            value='http://localhost:5173/payment'
+            value='http://localhost:8888/payment'
           ></input>
           <input type='hidden' name='Orders' value={serializedCartItems} />
           <div className='checkout-center'>

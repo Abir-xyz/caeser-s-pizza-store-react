@@ -95,6 +95,8 @@ export const CartSetup = ({ children }) => {
     return total;
   }, 0);
 
+ 
+
   // end of cart functionality
 
   return (
@@ -114,6 +116,7 @@ export const CartSetup = ({ children }) => {
         increaseItem,
         decreaseItem,
         totalPrice,
+        
       }}
     >
       {children}

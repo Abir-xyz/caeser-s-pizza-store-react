@@ -17,6 +17,10 @@ const Cart = () => {
     setEditCart(!editCart);
   };
 
+  const scrollToTop = () => {
+    window.scrollTo(0, 0);
+  };
+
   return (
     <>
       <Wrapper className='section'>
@@ -47,7 +51,15 @@ const Cart = () => {
                   <button className='view-cart' onClick={handleEditCart}>
                     {editCart ? 'Done' : 'Edit Cart'}
                   </button>
-                  <Link className='checkout'>Checkout</Link>
+                  <Link
+                    to='/checkout'
+                    className='checkout'
+                    onClick={() => {
+                      handleCartExit(), scrollToTop();
+                    }}
+                  >
+                    Checkout
+                  </Link>
                 </div>
               </div>
             )}
