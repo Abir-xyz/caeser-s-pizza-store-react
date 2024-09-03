@@ -54,7 +54,7 @@ const CheckoutForm = ({ dpmCheckerLink }) => {
     } else if (paymentIntent && paymentIntent.status === 'succeeded') {
       // Clear the cart after successful payment
       setCartItems([]);
-      window.location.href = 'http://localhost:8888/complete';
+      window.location.href = 'https://caeserpizzastore.netlify.app/complete';
     }
 
     setIsLoading(false);
