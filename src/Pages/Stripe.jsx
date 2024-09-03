@@ -1,4 +1,10 @@
+import StripeCheckout from '../Components/StripeCheckout';
+
 const Stripe = () => {
-  return <div>Stripe</div>;
+  return (
+    <div>
+      <StripeCheckout />
+    </div>
+  );
 };
 export default Stripe;

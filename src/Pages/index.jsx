@@ -6,5 +6,16 @@ import Acc from './AccPage';
 import Contact from './Contact';
 import CheckOut from './CheckOut';
 import Stripe from './Stripe';
+import CompletePage from './StripeComplete';
 
-export { Home, Category, About, Acc, Contact, Error, CheckOut, Stripe };
+export {
+  Home,
+  Category,
+  About,
+  Acc,
+  Contact,
+  Error,
+  CheckOut,
+  Stripe,
+  CompletePage,
+};

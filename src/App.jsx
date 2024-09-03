@@ -9,6 +9,7 @@ import {
   Error,
   CheckOut,
   Stripe,
+  CompletePage,
 } from './Pages/index';
 import PrivateRoute from './Pages/PrivateRoute';
 
@@ -24,6 +25,7 @@ const App = () => {
           <Route path='account' element={<Acc />} />
           <Route path='checkout' element={<CheckOut />} />
           <Route path='payment' element={<Stripe />} />
+          <Route path='complete' element={<CompletePage />} />
           <Route path='*' element={<Error />} />
         </Routes>
       </BrowserRouter>
