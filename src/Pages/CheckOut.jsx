@@ -48,7 +48,7 @@ const CheckOut = () => {
           <input
             type='hidden'
             name='redirect'
-            value='http://localhost:8888/payment'
+            value='https://caeserpizzastore.netlify.app/payment'
           ></input>
           <input type='hidden' name='Orders' value={serializedCartItems} />
           <div className='checkout-center'>

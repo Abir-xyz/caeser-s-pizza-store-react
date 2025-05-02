@@ -35,7 +35,7 @@ const CheckoutForm = ({ dpmCheckerLink }) => {
       elements,
       confirmParams: {
         // Make sure to change this to your payment completion page
-        return_url: 'http://localhost:8888/complete',
+        return_url: 'https://caeserpizzastore.netlify.app/complete',
       },
       redirect: 'if_required',
     });

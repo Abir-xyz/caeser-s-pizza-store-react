@@ -26,7 +26,7 @@ exports.handler = async (event) => {
         statusCode: 200,
         body: JSON.stringify({
           clientSecret: paymentIntent.client_secret,
-          dpmCheckerLink: 'https://example.com/dpm-checker', // or your actual link
+          dpmCheckerLink: 'https://example.com/dpm-checker',
         }),
       };
     } catch (error) {
