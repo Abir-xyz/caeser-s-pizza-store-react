@@ -1,8 +1,8 @@
-🍕 Caesar Pizza Store — Online Pizza Ordering Website
+# 🍕 Caesar Pizza Store — Online Pizza Ordering Website
 
 A modern and responsive pizza ordering web application built with React and integrated with Stripe for secure online payments.
 
-🛠 Tech Stack
+# 🛠 Tech Stack
 
 React — Component-based UI development
 
@@ -18,7 +18,7 @@ Stripe — Secure payment gateway integration
 
 Auth0 — User authentication and authorization
 
-📝 What This Project Demonstrates
+# 📝 What This Project Demonstrates
 
 Building scalable React applications
 
