@@ -4,30 +4,30 @@ A modern and responsive pizza ordering web application built with React and inte
 
 ## 🛠 Tech Stack
 
-React — Component-based UI development
+- React — Component-based UI development
 
-React Router — Client-side routing
+- React Router — Client-side routing
 
-Axios — API communication
+- Axios — API communication
 
-Netlify Functions — Serverless backend for handling Stripe payments
+- Netlify Functions — Serverless backend for handling Stripe payments
 
-Styled-Components — Scoped and dynamic styling
+- Styled-Components — Scoped and dynamic styling
 
-Stripe — Secure payment gateway integration
+- Stripe — Secure payment gateway integration
 
-Auth0 — User authentication and authorization
+- Auth0 — User authentication and authorization
 
 ## 📝 What This Project Demonstrates
 
-Building scalable React applications
+- Building scalable React applications
 
-Implementing protected routes with authentication
+- Implementing protected routes with authentication
 
-Creating serverless APIs
+- Creating serverless APIs
 
-Integrating third-party payment gateways
+- Integrating third-party payment gateways
 
-Managing global state and async operations
+- Managing global state and async operations
 
-Clean component architecture
+- Clean component architecture
